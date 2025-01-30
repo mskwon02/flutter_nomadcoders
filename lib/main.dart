@@ -84,9 +84,9 @@ class MyApp extends StatelessWidget {
                   const SizedBox(
                     height: 80,
                   ),
-                  Column(
+                  const Column(
                     children: [
-                      const Row(
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
@@ -106,35 +106,32 @@ class MyApp extends StatelessWidget {
                           )
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
+                      SizedBox(
+                        height: 40,
                       ),
-                      const CurrencyCard(
+                      CurrencyCard(
                         name: "Euro",
                         code: "EUR",
                         amount: "6 787",
                         icon: Icons.euro_symbol_rounded,
                         isReversed: true,
+                        order: 1,
                       ),
-                      Transform.translate(
-                        offset: const Offset(0, -20),
-                        child: const CurrencyCard(
-                          name: "Bitcoin",
-                          code: "9 763",
-                          amount: "BTC",
-                          icon: Icons.currency_bitcoin,
-                          isReversed: false,
-                        ),
+                      CurrencyCard(
+                        name: "Bitcoin",
+                        code: "9 763",
+                        amount: "BTC",
+                        icon: Icons.currency_bitcoin,
+                        isReversed: false,
+                        order: 2,
                       ),
-                      Transform.translate(
-                        offset: const Offset(0, -40),
-                        child: const CurrencyCard(
-                          name: "Dollar",
-                          code: "163",
-                          amount: "USD",
-                          icon: Icons.attach_money,
-                          isReversed: true,
-                        ),
+                      CurrencyCard(
+                        name: "Dollar",
+                        code: "163",
+                        amount: "USD",
+                        icon: Icons.attach_money,
+                        isReversed: true,
+                        order: 3,
                       )
                     ],
                   )
